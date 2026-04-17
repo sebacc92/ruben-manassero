@@ -6,12 +6,12 @@ export const Hero = component$(() => {
       {/* Background Image with Parallax */}
       <div
         class="absolute inset-0 bg-cover bg-center bg-fixed"
-        style="background-image: url('/hero-bg.png');"
+        style="background-image: url('/hero-bg.webp');"
         aria-hidden="true"
       />
 
       {/* Gradient Overlay */}
-      <div class="absolute inset-0 hero-gradient-bg bg-gradient-to-br from-[#0c4a6e]/90 via-[#0e7490]/85 to-[#164e63]/90" />
+      <div class="absolute inset-0 hero-gradient-bg bg-gradient-to-br from-[#0c4a6e]/75 via-[#0e7490]/65 to-[#164e63]/75" />
 
       {/* Decorative organic shapes */}
       <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#06b6d4]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 float-element" />
@@ -35,18 +35,20 @@ export const Hero = component$(() => {
       />
 
       {/* Content */}
-      <div class="relative z-10 max-w-5xl mx-auto text-center px-4 py-32 md:py-40">
+      <div class="relative z-10 max-w-6xl mx-auto text-center px-4 py-32 md:py-40">
         {/* Badge */}
         <div class="hero-badge-anim inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-10">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span class="text-cyan-100 text-sm font-medium tracking-wide">Especialista Consultor en Urología</span>
         </div>
 
-        <h1 class="hero-title-anim text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[1.05] tracking-tight text-balance">
-          Urología de{" "}
-          <span class="shimmer-text">excelencia</span>
-          <br />
-          <span class="text-cyan-200">en La Plata</span>
+        <h1 class="hero-title-anim text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[1.1] tracking-tight">
+          <span class="block mb-2">
+            Urología de <span class="shimmer-text">excelencia</span>
+          </span>
+          <span class="block text-cyan-200">
+            en la ciudad de La Plata
+          </span>
         </h1>
 
         <p class="hero-subtitle-anim text-xl md:text-2xl text-cyan-100/90 mt-8 max-w-2xl mx-auto leading-relaxed font-light">
@@ -78,7 +80,7 @@ export const Hero = component$(() => {
           </a>
         </div>
 
-        <a 
+        <a
           href="#perfil"
           class="hero-cta-anim absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer no-underline"
           aria-label="Desplazarse hacia abajo"

@@ -16,11 +16,16 @@ export const Footer = component$(() => {
       <div class="max-w-6xl mx-auto px-4 py-16 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
-          {/* Brand */}
           <div class="space-y-5">
-            <div>
-              <h3 class="text-2xl font-bold text-white">Dr. Rubén Manassero</h3>
-              <p class="text-cyan-400 text-base font-medium mt-1">Especialista Consultor en Urología</p>
+            <div class="mb-6">
+              <img
+                src="/logos/logo-rubben-blanco.png"
+                alt="Logo Dr. Rubén Manassero"
+                class="h-14 w-auto mb-2"
+                width={220}
+                height={55}
+              />
+              <p class="text-cyan-400 text-base font-medium mt-1 pl-1">Especialista Consultor en Urología</p>
             </div>
             <p class="text-slate-400 text-base leading-relaxed">
               Más de 20 años de experiencia en el diagnóstico y tratamiento de patologías urológicas, con especial dedicación a la urología funcional y femenina.

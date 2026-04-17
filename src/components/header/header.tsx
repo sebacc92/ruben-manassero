@@ -31,38 +31,23 @@ export const Header = component$(() => {
         <div class="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <a href="#" class="flex items-center gap-3 group" aria-label="Inicio">
-            {/* Medical cross icon */}
-            <div class={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-              isScrolled.value
-                ? "bg-gradient-to-br from-cyan-500 to-cyan-600 shadow-md"
-                : "bg-white/15 backdrop-blur-sm border border-white/20"
-            }`}>
-              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
-              </svg>
-            </div>
-            <div>
-              <span class={`font-bold text-xl leading-tight block transition-colors duration-300 ${
-                isScrolled.value ? "text-slate-900" : "text-white"
-              }`}>
-                Dr. Manassero
-              </span>
-              <span class={`text-xs font-medium tracking-wider uppercase leading-tight block transition-colors duration-300 ${
-                isScrolled.value ? "text-cyan-600" : "text-cyan-200"
-              }`}>
-                Urología
-              </span>
-            </div>
+          <a href="#" class="flex-shrink-0 flex items-center group" aria-label="Inicio">
+            <img
+              src={isScrolled.value ? "/logos/logo-rubben-negro.png" : "/logos/logo-rubben-blanco.png"}
+              alt="Logo Dr. Rubén Manassero"
+              class="h-16 w-auto transition-all duration-500"
+              width={260}
+              height={65}
+            />
           </a>
 
           {/* Desktop Nav */}
-          <nav class="hidden md:flex items-center gap-1">
+          <nav class="hidden lg:flex items-center gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                class={`px-4 py-2 rounded-xl text-base font-medium transition-all duration-300 ${
+                class={`px-4 py-2 rounded-xl text-lg font-medium transition-all duration-300 ${
                   isScrolled.value
                     ? "text-slate-600 hover:text-cyan-600 hover:bg-cyan-50"
                     : "text-white/80 hover:text-white hover:bg-white/10"
@@ -74,7 +59,7 @@ export const Header = component$(() => {
           </nav>
 
           {/* Desktop Right: Social + CTA */}
-          <div class="hidden md:flex items-center gap-4">
+          <div class="hidden lg:flex items-center gap-4">
             {/* Social Icons */}
             <div class="flex items-center gap-2">
               {/* Instagram */}
@@ -116,7 +101,7 @@ export const Header = component$(() => {
               href="https://cal.com/ruben-manassero"
               target="_blank"
               rel="noopener noreferrer"
-              class={`btn-primary inline-flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold transition-all duration-300 ${
+              class={`btn-primary flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold transition-all duration-300 ${
                 isScrolled.value
                   ? "bg-gradient-to-r from-cyan-500 to-cyan-600 text-white shadow-md shadow-cyan-500/20"
                   : "bg-white text-cyan-900 shadow-lg"
@@ -133,7 +118,7 @@ export const Header = component$(() => {
           <button
             type="button"
             onClick$={() => (isMenuOpen.value = !isMenuOpen.value)}
-            class={`md:hidden w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
+            class={`lg:hidden w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
               isScrolled.value
                 ? "text-slate-700 hover:bg-slate-100"
                 : "text-white hover:bg-white/10"
@@ -164,7 +149,7 @@ export const Header = component$(() => {
 
       {/* Mobile Menu Overlay */}
       <div
-        class={`md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+        class={`lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
           isMenuOpen.value ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick$={() => (isMenuOpen.value = false)}
@@ -173,7 +158,7 @@ export const Header = component$(() => {
 
       {/* Mobile Menu Panel */}
       <div
-        class={`md:hidden fixed top-0 right-0 h-full w-[280px] bg-white z-50 shadow-2xl transition-transform duration-400 ease-out ${
+        class={`lg:hidden fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-50 shadow-2xl transition-transform duration-400 ease-out ${
           isMenuOpen.value ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -193,9 +178,14 @@ export const Header = component$(() => {
           </div>
 
           {/* Mobile Logo */}
-          <div class="mb-8">
-            <span class="font-bold text-lg text-slate-900 block">Dr. Manassero</span>
-            <span class="text-xs text-cyan-600 font-medium uppercase tracking-wider">Urología</span>
+          <div class="mb-10 px-8">
+            <img
+              src="/logos/logo-rubben-negro.png"
+              alt="Logo Dr. Rubén Manassero"
+              class="h-16 w-auto object-contain"
+              width={280}
+              height={70}
+            />
           </div>
 
           {/* Mobile Nav Links */}
@@ -205,7 +195,7 @@ export const Header = component$(() => {
                 key={link.href}
                 href={link.href}
                 onClick$={() => (isMenuOpen.value = false)}
-                class="flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-300 font-medium"
+                class="flex items-center gap-4 px-4 py-4 rounded-xl text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-300 font-semibold text-xl"
               >
                 {link.label}
               </a>
