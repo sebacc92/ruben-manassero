@@ -35,7 +35,7 @@ export const Header = component$(() => {
             <img
               src={isScrolled.value ? "/logos/logo-rubben-negro.png" : "/logos/logo-rubben-blanco.png"}
               alt="Logo Dr. Rubén Manassero"
-              class="h-16 w-auto transition-all duration-500"
+              class="h-6 md:h-8 w-auto max-w-[60vw] object-contain transition-all duration-500"
               width={260}
               height={65}
             />
@@ -47,7 +47,7 @@ export const Header = component$(() => {
               <a
                 key={link.href}
                 href={link.href}
-                class={`px-4 py-2 rounded-xl text-lg font-medium transition-all duration-300 ${
+                class={`px-4 py-2 rounded-xl text-xl font-bold uppercase tracking-wider transition-all duration-300 ${
                   isScrolled.value
                     ? "text-slate-600 hover:text-cyan-600 hover:bg-cyan-50"
                     : "text-white/80 hover:text-white hover:bg-white/10"
@@ -107,7 +107,7 @@ export const Header = component$(() => {
                   : "bg-white text-cyan-900 shadow-lg"
               }`}
             >
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg class="w-4 h-4 hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               Solicitar turno
@@ -182,7 +182,7 @@ export const Header = component$(() => {
             <img
               src="/logos/logo-rubben-negro.png"
               alt="Logo Dr. Rubén Manassero"
-              class="h-16 w-auto object-contain"
+              class="h-10 w-auto object-contain"
               width={280}
               height={70}
             />
