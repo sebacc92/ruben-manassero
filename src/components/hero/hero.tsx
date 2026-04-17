@@ -42,7 +42,7 @@ export const Hero = component$(() => {
           <span class="text-cyan-100 text-sm font-medium tracking-wide">Especialista Consultor en Urología</span>
         </div>
 
-        <h1 class="hero-title-anim text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[1.1] tracking-tight">
+        <h1 class="hero-title-anim text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[1.1] tracking-tight drop-shadow-2xl">
           <span class="block mb-2">
             Urología de <span class="shimmer-text">excelencia</span>
           </span>
@@ -51,7 +51,7 @@ export const Hero = component$(() => {
           </span>
         </h1>
 
-        <p class="hero-subtitle-anim text-xl md:text-2xl text-cyan-100/90 mt-8 max-w-2xl mx-auto leading-relaxed font-light">
+        <p class="hero-subtitle-anim text-xl md:text-2xl text-cyan-100/90 mt-8 max-w-2xl mx-auto leading-relaxed font-bold">
           Más de 20 años de experiencia en el cuidado integral de la salud urológica
         </p>
 
