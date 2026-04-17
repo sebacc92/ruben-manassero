@@ -85,9 +85,9 @@ export const Hero = component$(() => {
           class="hero-cta-anim absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer no-underline"
           aria-label="Desplazarse hacia abajo"
         >
-          <span class="text-xs uppercase tracking-widest text-white/40 group-hover:text-white transition-colors">Descubrir más</span>
-          <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white transition-colors animate-bounce">
-            <svg class="w-5 h-5 text-white/40 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <span class="text-xs uppercase tracking-widest text-white/70 group-hover:text-white transition-colors">Descubrir más</span>
+          <div class="mt-2 w-10 h-10 rounded-full border border-white/40 flex items-center justify-center group-hover:border-white transition-colors animate-bounce">
+            <svg class="w-5 h-5 text-white/70 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
