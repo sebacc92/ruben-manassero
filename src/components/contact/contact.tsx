@@ -15,12 +15,12 @@ export const Contact = component$(() => {
       <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-100/20 rounded-full blur-3xl" aria-hidden="true" />
       <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-blue-100/20 rounded-full blur-3xl" aria-hidden="true" />
 
-      <div class="max-w-5xl mx-auto space-y-16 relative z-10">
+      <div class="max-w-7xl mx-auto space-y-16 relative z-10">
 
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div class="text-center space-y-5">
-            <span class="inline-block text-cyan-600 text-sm font-semibold tracking-widest uppercase">Reservá tu consulta</span>
+            <span class="inline-block text-cyan-600 text-base font-semibold tracking-widest uppercase">Reservá tu consulta</span>
             <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
               Atención y <span class="gradient-text">Consultas</span>
             </h2>
@@ -94,7 +94,7 @@ export const Contact = component$(() => {
                 <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center shrink-0">
                   <LuAlertTriangle class="w-5 h-5 text-red-500" />
                 </div>
-                <div class="text-sm text-red-900">
+                <div class="text-base text-red-900">
                   <strong class="block font-bold text-base mb-1">Urgencias</strong>
                   Las urgencias urológicas se atienden a través del sistema de guardia hospitalaria correspondiente.
                 </div>
@@ -120,7 +120,7 @@ export const Contact = component$(() => {
                   <div class="w-full">
                     <div class="mb-4">
                       <strong class="block text-slate-900 text-lg">Turnos Programados</strong>
-                      <span class="inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-50 to-cyan-100/50 text-cyan-700 px-3 py-1 rounded-full text-xs font-semibold mt-1.5 mb-3 border border-cyan-100/50">
+                      <span class="inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-50 to-cyan-100/50 text-cyan-700 px-3 py-1 rounded-full text-sm font-semibold mt-1.5 mb-3 border border-cyan-100/50">
                         <LuShield class="w-3 h-3" />
                         Obra Social / Prepaga
                       </span>
@@ -131,14 +131,14 @@ export const Contact = component$(() => {
                           <LuClock class="w-4 h-4 text-cyan-500" />
                           <span class="font-semibold text-slate-900">Martes</span>
                         </div>
-                        <span class="text-cyan-700 font-medium text-sm bg-cyan-50 px-3 py-1 rounded-full">13:00 – 17:30</span>
+                        <span class="text-cyan-700 font-medium text-base bg-cyan-50 px-3 py-1 rounded-full">13:00 – 17:30</span>
                       </li>
                       <li class="flex justify-between items-center bg-gradient-to-r from-slate-50 to-white p-4 rounded-xl border border-slate-100/60 hover:shadow-sm transition-shadow">
                         <div class="flex items-center gap-3">
                           <LuClock class="w-4 h-4 text-cyan-500" />
                           <span class="font-semibold text-slate-900">Jueves</span>
                         </div>
-                        <span class="text-cyan-700 font-medium text-sm bg-cyan-50 px-3 py-1 rounded-full">17:30 – 20:30</span>
+                        <span class="text-cyan-700 font-medium text-base bg-cyan-50 px-3 py-1 rounded-full">17:30 – 20:30</span>
                       </li>
                     </ul>
                   </div>
@@ -150,9 +150,9 @@ export const Contact = component$(() => {
                       <LuInfo class="w-5 h-5 text-amber-500" />
                       Sobreturnos
                     </strong>
-                    <span class="inline-block bg-gradient-to-r from-amber-50 to-orange-50 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold mt-1.5 mb-3 border border-amber-100/50">Consulta particular</span>
+                    <span class="inline-block bg-gradient-to-r from-amber-50 to-orange-50 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold mt-1.5 mb-3 border border-amber-100/50">Consulta particular</span>
                   </div>
-                  <ul class="space-y-3 text-slate-500 text-sm">
+                  <ul class="space-y-3 text-slate-500 text-base">
                     <li class="flex items-center gap-3">
                       <span class="w-2 h-2 bg-gradient-to-br from-amber-300 to-amber-500 rounded-full" />
                       Martes a partir de las 17:30 hs

@@ -13,7 +13,7 @@ export const Footer = component$(() => {
       <div class="absolute top-10 right-10 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl" aria-hidden="true" />
       <div class="absolute bottom-10 left-10 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl" aria-hidden="true" />
 
-      <div class="max-w-6xl mx-auto px-4 py-16 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 py-16 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
           <div class="space-y-5">
@@ -31,14 +31,14 @@ export const Footer = component$(() => {
               Más de 20 años de experiencia en el diagnóstico y tratamiento de patologías urológicas, con especial dedicación a la urología funcional y femenina.
             </p>
             <div class="flex gap-3">
-              <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 font-medium">MP: 111.629</span>
-              <span class="text-xs bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 font-medium">MN: 92.627</span>
+              <span class="text-sm bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 font-medium">MP: 111.629</span>
+              <span class="text-sm bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 font-medium">MN: 92.627</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div class="space-y-5">
-            <h4 class="text-sm font-semibold uppercase tracking-widest text-slate-500">Navegación</h4>
+            <h4 class="text-base font-semibold uppercase tracking-widest text-slate-500">Navegación</h4>
             <nav class="space-y-3">
               <a href="#perfil" class="block text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-base animated-underline w-fit">Perfil Profesional</a>
               <a href="#especialidades" class="block text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-base animated-underline w-fit">Áreas de Atención</a>
@@ -56,7 +56,7 @@ export const Footer = component$(() => {
 
           {/* Contact Info */}
           <div class="space-y-5">
-            <h4 class="text-sm font-semibold uppercase tracking-widest text-slate-500">Contacto</h4>
+            <h4 class="text-base font-semibold uppercase tracking-widest text-slate-500">Contacto</h4>
             <div class="space-y-4">
               <div class="flex items-start gap-3">
                 <LuMapPin class="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
@@ -93,7 +93,7 @@ export const Footer = component$(() => {
           <p class="text-base text-slate-500">
             © {currentYear} Dr. Rubén Manassero. Todos los derechos reservados.
           </p>
-          <p class="text-sm text-slate-500 flex items-center gap-1.5">
+          <p class="text-base text-slate-500 flex items-center gap-1.5">
             Hecho con <LuHeart class="w-3 h-3 text-rose-500" /> por{" "}
             <a
               href="https://indesign.ar/"

@@ -35,11 +35,11 @@ export const Hero = component$(() => {
       />
 
       {/* Content */}
-      <div class="relative z-10 max-w-6xl mx-auto text-center px-4 py-32 md:py-40">
+      <div class="relative z-10 max-w-7xl mx-auto text-center px-4 py-32 md:py-40">
         {/* Badge */}
         <div class="hero-badge-anim inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-10">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span class="text-cyan-100 text-sm font-medium tracking-wide">Especialista Consultor en Urología</span>
+          <span class="text-cyan-100 text-base font-medium tracking-wide">Especialista Consultor en Urología</span>
         </div>
 
         <h1 class="hero-title-anim text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[1.1] tracking-tight drop-shadow-2xl">
@@ -57,10 +57,10 @@ export const Hero = component$(() => {
 
         {/* Credentials */}
         <div class="hero-badge-anim flex items-center justify-center gap-6 mt-6">
-          <div class="glass-dark rounded-full px-4 py-1.5 text-sm text-cyan-200 font-medium">
+          <div class="glass-dark rounded-full px-4 py-1.5 text-base text-cyan-200 font-medium">
             MP: 111.629
           </div>
-          <div class="glass-dark rounded-full px-4 py-1.5 text-sm text-cyan-200 font-medium">
+          <div class="glass-dark rounded-full px-4 py-1.5 text-base text-cyan-200 font-medium">
             MN: 92.627
           </div>
         </div>
@@ -85,7 +85,7 @@ export const Hero = component$(() => {
           class="hero-cta-anim absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer no-underline"
           aria-label="Desplazarse hacia abajo"
         >
-          <span class="text-xs uppercase tracking-widest text-white/70 group-hover:text-white transition-colors">Descubrir más</span>
+          <span class="text-sm uppercase tracking-widest text-white/70 group-hover:text-white transition-colors">Descubrir más</span>
           <div class="mt-2 w-10 h-10 rounded-full border border-white/40 flex items-center justify-center group-hover:border-white transition-colors animate-bounce">
             <svg class="w-5 h-5 text-white/70 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />

@@ -86,12 +86,12 @@ export const Specialties = component$(() => {
         aria-hidden="true"
       />
 
-      <div class="max-w-6xl mx-auto space-y-20 relative z-10">
+      <div class="max-w-7xl mx-auto space-y-20 relative z-10">
 
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div class="text-center space-y-5 max-w-2xl mx-auto">
-            <span class="inline-block text-cyan-600 text-sm font-semibold tracking-widest uppercase">Servicios médicos</span>
+            <span class="inline-block text-cyan-600 text-base font-semibold tracking-widest uppercase">Servicios médicos</span>
             <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
               Áreas de <span class="gradient-text">Atención</span>
             </h2>
@@ -114,10 +114,10 @@ export const Specialties = component$(() => {
                   <spec.icon class="w-7 h-7 text-cyan-600" />
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-700 transition-colors duration-300">{spec.title}</h3>
-                <p class="text-slate-500 mb-5 text-sm font-medium leading-relaxed">{spec.description}</p>
+                <p class="text-slate-500 mb-5 text-base font-medium leading-relaxed">{spec.description}</p>
                 <ul class="space-y-3 flex-grow">
                   {spec.items.map((item, itemId) => (
-                    <li key={itemId} class="flex items-start gap-2.5 text-sm text-slate-600">
+                    <li key={itemId} class="flex items-start gap-2.5 text-base text-slate-600">
                       <LuCheck class="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
@@ -160,7 +160,7 @@ export const Specialties = component$(() => {
               <p class="text-cyan-800/80 text-lg mb-8 relative z-10">Se recomienda una pronta evaluación urológica ante la presencia de:</p>
               <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
                 {cuandoConsultar.map((item, idx) => (
-                  <li key={idx} class="flex items-start gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-cyan-100/50 text-cyan-900 text-sm group hover:bg-white hover:shadow-sm transition-all duration-300 hover:-translate-y-0.5">
+                  <li key={idx} class="flex items-start gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-cyan-100/50 text-cyan-900 text-base group hover:bg-white hover:shadow-sm transition-all duration-300 hover:-translate-y-0.5">
                     <LuCheck class="w-5 h-5 text-cyan-600 shrink-0 group-hover:scale-110 transition-transform" />
                     <span class="pt-0.5">{item}</span>
                   </li>

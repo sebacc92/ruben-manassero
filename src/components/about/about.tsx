@@ -38,12 +38,12 @@ export const About = component$(() => {
       <div class="absolute top-20 right-0 w-96 h-96 bg-cyan-100/30 rounded-full blur-3xl -translate-x-1/2" aria-hidden="true" />
       <div class="absolute bottom-10 left-0 w-72 h-72 bg-blue-100/20 rounded-full blur-3xl translate-x-1/4" aria-hidden="true" />
 
-      <div class="max-w-6xl mx-auto space-y-20 relative z-10">
+      <div class="max-w-7xl mx-auto space-y-20 relative z-10">
 
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div class="text-center space-y-5 max-w-3xl mx-auto">
-            <span class="inline-block text-cyan-600 text-sm font-semibold tracking-widest uppercase">Sobre el profesional</span>
+            <span class="inline-block text-cyan-600 text-base font-semibold tracking-widest uppercase">Sobre el profesional</span>
             <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
               Perfil <span class="gradient-text">Profesional</span>
             </h2>
@@ -71,7 +71,7 @@ export const About = component$(() => {
                   <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-900/40 to-transparent" />
                   <div class="absolute bottom-4 left-4 right-4">
                     <p class="text-white font-bold text-lg drop-shadow-md">Dr. Rubén Manassero</p>
-                    <p class="text-cyan-200 text-sm font-medium drop-shadow-md">Especialista Consultor en Urología</p>
+                    <p class="text-cyan-200 text-base font-medium drop-shadow-md">Especialista Consultor en Urología</p>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export const About = component$(() => {
                 {stats.map((stat, idx) => (
                   <div key={idx} class="text-center counter-item">
                     <div class="text-3xl md:text-4xl font-extrabold gradient-text">{stat.number}</div>
-                    <div class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">{stat.label}</div>
+                    <div class="text-sm text-slate-500 mt-1 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -130,7 +130,7 @@ export const About = component$(() => {
                   </li>
                 ))}
               </ul>
-              <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-5 rounded-xl border border-cyan-100/50 text-sm text-cyan-800 font-medium">
+              <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-5 rounded-xl border border-cyan-100/50 text-base text-cyan-800 font-medium">
                 Su participación institucional refleja un compromiso activo con el desarrollo y la actualización de la urología a nivel regional y nacional.
               </div>
             </div>
@@ -164,11 +164,11 @@ export const About = component$(() => {
                   {continua.map((item, id) => (
                     <li key={id} class="flex items-center gap-3 bg-gradient-to-r from-slate-50 to-white p-4 rounded-xl border border-slate-100/60 group hover:border-cyan-200 hover:shadow-sm transition-all duration-300">
                       <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex-shrink-0 group-hover:scale-125 transition-transform" />
-                      <span class="text-sm text-slate-700 group-hover:text-slate-900 transition-colors">{item}</span>
+                      <span class="text-base text-slate-700 group-hover:text-slate-900 transition-colors">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <p class="text-sm text-slate-500 mt-6 border-t border-slate-100 pt-4">
+                <p class="text-base text-slate-500 mt-6 border-t border-slate-100 pt-4">
                   Participa regularmente en congresos, jornadas científicas y actividades de actualización profesional.
                 </p>
               </div>

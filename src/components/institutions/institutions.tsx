@@ -27,7 +27,7 @@ export const Institutions = component$(() => {
 
   return (
     <section class="bg-white py-20 border-b border-slate-100">
-      <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-7xl mx-auto px-4">
         <ScrollReveal direction="up">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 lg:gap-24 items-center justify-items-center transition-opacity duration-500">
             {logos.map((logo, idx) => (
@@ -37,7 +37,7 @@ export const Institutions = component$(() => {
                   alt={logo.alt}
                   class="h-24 md:h-28 lg:h-32 w-auto object-contain"
                 />
-                <span class="text-xs font-bold text-slate-500 transition-colors group-hover:text-cyan-600 text-center uppercase tracking-wider">
+                <span class="text-sm font-bold text-slate-500 transition-colors group-hover:text-cyan-600 text-center uppercase tracking-wider">
                   {logo.name}
                 </span>
               </div>

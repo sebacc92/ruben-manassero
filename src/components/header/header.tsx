@@ -26,7 +26,7 @@ export const Header = component$(() => {
         : "bg-transparent"
         }`}
     >
-      <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-7xl mx-auto px-4">
         <div class="flex items-center justify-between h-20">
 
           {/* Logo */}
@@ -34,7 +34,7 @@ export const Header = component$(() => {
             <img
               src={isScrolled.value ? "/logos/logo-rubben-negro.png" : "/logos/logo-rubben-blanco.png"}
               alt="Logo Dr. Rubén Manassero"
-              class="h-6 md:h-8 w-auto max-w-[60vw] object-contain transition-all duration-500"
+              class="h-10 md:h-12 xl:h-14 w-auto max-w-[60vw] object-contain transition-all duration-500"
               width={260}
               height={65}
             />
@@ -113,17 +113,17 @@ export const Header = component$(() => {
           <button
             type="button"
             onClick$={() => (isMenuOpen.value = !isMenuOpen.value)}
-            class={`lg:hidden w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${isScrolled.value
+            class={`lg:hidden w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isScrolled.value
               ? "text-slate-700 hover:bg-slate-100"
               : "text-white hover:bg-white/10"
               }`}
             aria-label={isMenuOpen.value ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isMenuOpen.value}
           >
-            <div class="w-5 h-4 relative flex flex-col justify-between">
+            <div class="w-6 h-5 relative flex flex-col justify-between">
               <span
                 class={`block h-0.5 rounded-full transition-all duration-300 origin-center ${isScrolled.value ? "bg-slate-700" : "bg-white"
-                  } ${isMenuOpen.value ? "rotate-45 translate-y-[7px]" : ""}`}
+                  } ${isMenuOpen.value ? "rotate-45 translate-y-[9px]" : ""}`}
               />
               <span
                 class={`block h-0.5 rounded-full transition-all duration-300 ${isScrolled.value ? "bg-slate-700" : "bg-white"
@@ -131,7 +131,7 @@ export const Header = component$(() => {
               />
               <span
                 class={`block h-0.5 rounded-full transition-all duration-300 origin-center ${isScrolled.value ? "bg-slate-700" : "bg-white"
-                  } ${isMenuOpen.value ? "-rotate-45 -translate-y-[7px]" : ""}`}
+                  } ${isMenuOpen.value ? "-rotate-45 -translate-y-[9px]" : ""}`}
               />
             </div>
           </button>
@@ -171,7 +171,7 @@ export const Header = component$(() => {
             <img
               src="/logos/logo-rubben-negro.png"
               alt="Logo Dr. Rubén Manassero"
-              class="h-10 w-auto object-contain"
+              class="h-12 w-auto object-contain"
               width={280}
               height={70}
             />
@@ -193,7 +193,7 @@ export const Header = component$(() => {
 
           {/* Mobile Social */}
           <div class="pt-6 border-t border-slate-100">
-            <p class="text-xs text-slate-400 uppercase tracking-wider mb-4 font-semibold">Redes</p>
+            <p class="text-sm text-slate-400 uppercase tracking-wider mb-4 font-semibold">Redes</p>
             <div class="flex items-center gap-3 mb-6">
               <a
                 href="https://www.instagram.com/"
