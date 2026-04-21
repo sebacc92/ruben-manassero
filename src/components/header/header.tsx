@@ -21,11 +21,10 @@ export const Header = component$(() => {
 
   return (
     <header
-      class={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled.value
-          ? "bg-white/90 backdrop-blur-xl shadow-lg shadow-slate-900/5 border-b border-slate-100/50"
-          : "bg-transparent"
-      }`}
+      class={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled.value
+        ? "bg-white/90 backdrop-blur-xl shadow-lg shadow-slate-900/5 border-b border-slate-100/50"
+        : "bg-transparent"
+        }`}
     >
       <div class="max-w-6xl mx-auto px-4">
         <div class="flex items-center justify-between h-20">
@@ -47,11 +46,10 @@ export const Header = component$(() => {
               <a
                 key={link.href}
                 href={link.href}
-                class={`px-4 py-2 rounded-xl text-xl font-bold uppercase tracking-wider transition-all duration-300 ${
-                  isScrolled.value
-                    ? "text-slate-600 hover:text-cyan-600 hover:bg-cyan-50"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
-                }`}
+                class={`px-4 py-2 rounded-xl text-xl font-bold uppercase tracking-wider transition-all duration-300 ${isScrolled.value
+                  ? "text-slate-600 hover:text-cyan-600 hover:bg-cyan-50"
+                  : "text-white/80 hover:text-white hover:bg-white/10"
+                  }`}
               >
                 {link.label}
               </a>
@@ -67,11 +65,10 @@ export const Header = component$(() => {
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                  isScrolled.value
-                    ? "text-slate-400 hover:text-pink-500 hover:bg-pink-50"
-                    : "text-white/60 hover:text-white hover:bg-white/10"
-                }`}
+                class={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isScrolled.value
+                  ? "text-slate-400 hover:text-pink-500 hover:bg-pink-50"
+                  : "text-white/60 hover:text-white hover:bg-white/10"
+                  }`}
                 aria-label="Instagram"
               >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -83,11 +80,10 @@ export const Header = component$(() => {
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                  isScrolled.value
-                    ? "text-slate-400 hover:text-blue-600 hover:bg-blue-50"
-                    : "text-white/60 hover:text-white hover:bg-white/10"
-                }`}
+                class={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isScrolled.value
+                  ? "text-slate-400 hover:text-blue-600 hover:bg-blue-50"
+                  : "text-white/60 hover:text-white hover:bg-white/10"
+                  }`}
                 aria-label="LinkedIn"
               >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -98,14 +94,13 @@ export const Header = component$(() => {
 
             {/* CTA Button */}
             <a
-              href="https://cal.com/ruben-manassero"
+              href="http://www.icmsalud.com.ar:8080/Turnos"
               target="_blank"
               rel="noopener noreferrer"
-              class={`btn-primary flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold transition-all duration-300 ${
-                isScrolled.value
-                  ? "bg-gradient-to-r from-cyan-500 to-cyan-600 text-white shadow-md shadow-cyan-500/20"
-                  : "bg-white text-cyan-900 shadow-lg"
-              }`}
+              class={`btn-primary flex items-center gap-2 rounded-xl px-6 py-3 text-base font-semibold transition-all duration-300 ${isScrolled.value
+                ? "bg-gradient-to-r from-cyan-500 to-cyan-600 text-white shadow-md shadow-cyan-500/20"
+                : "bg-white text-cyan-900 shadow-lg"
+                }`}
             >
               <svg class="w-4 h-4 hidden xl:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -118,29 +113,25 @@ export const Header = component$(() => {
           <button
             type="button"
             onClick$={() => (isMenuOpen.value = !isMenuOpen.value)}
-            class={`lg:hidden w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-              isScrolled.value
-                ? "text-slate-700 hover:bg-slate-100"
-                : "text-white hover:bg-white/10"
-            }`}
+            class={`lg:hidden w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${isScrolled.value
+              ? "text-slate-700 hover:bg-slate-100"
+              : "text-white hover:bg-white/10"
+              }`}
             aria-label={isMenuOpen.value ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isMenuOpen.value}
           >
             <div class="w-5 h-4 relative flex flex-col justify-between">
               <span
-                class={`block h-0.5 rounded-full transition-all duration-300 origin-center ${
-                  isScrolled.value ? "bg-slate-700" : "bg-white"
-                } ${isMenuOpen.value ? "rotate-45 translate-y-[7px]" : ""}`}
+                class={`block h-0.5 rounded-full transition-all duration-300 origin-center ${isScrolled.value ? "bg-slate-700" : "bg-white"
+                  } ${isMenuOpen.value ? "rotate-45 translate-y-[7px]" : ""}`}
               />
               <span
-                class={`block h-0.5 rounded-full transition-all duration-300 ${
-                  isScrolled.value ? "bg-slate-700" : "bg-white"
-                } ${isMenuOpen.value ? "opacity-0 scale-0" : ""}`}
+                class={`block h-0.5 rounded-full transition-all duration-300 ${isScrolled.value ? "bg-slate-700" : "bg-white"
+                  } ${isMenuOpen.value ? "opacity-0 scale-0" : ""}`}
               />
               <span
-                class={`block h-0.5 rounded-full transition-all duration-300 origin-center ${
-                  isScrolled.value ? "bg-slate-700" : "bg-white"
-                } ${isMenuOpen.value ? "-rotate-45 -translate-y-[7px]" : ""}`}
+                class={`block h-0.5 rounded-full transition-all duration-300 origin-center ${isScrolled.value ? "bg-slate-700" : "bg-white"
+                  } ${isMenuOpen.value ? "-rotate-45 -translate-y-[7px]" : ""}`}
               />
             </div>
           </button>
@@ -149,18 +140,16 @@ export const Header = component$(() => {
 
       {/* Mobile Menu Overlay */}
       <div
-        class={`lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${
-          isMenuOpen.value ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        class={`lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 ${isMenuOpen.value ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         onClick$={() => (isMenuOpen.value = false)}
         aria-hidden="true"
       />
 
       {/* Mobile Menu Panel */}
       <div
-        class={`lg:hidden fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-50 shadow-2xl transition-transform duration-400 ease-out ${
-          isMenuOpen.value ? "translate-x-0" : "translate-x-full"
-        }`}
+        class={`lg:hidden fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-50 shadow-2xl transition-transform duration-400 ease-out ${isMenuOpen.value ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div class="p-6 h-full flex flex-col">
           {/* Close button */}
@@ -233,7 +222,7 @@ export const Header = component$(() => {
 
           {/* Mobile CTA */}
           <a
-            href="https://cal.com/ruben-manassero"
+            href="http://www.icmsalud.com.ar:8080/Turnos"
             target="_blank"
             rel="noopener noreferrer"
             onClick$={() => (isMenuOpen.value = false)}

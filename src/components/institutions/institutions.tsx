@@ -17,6 +17,11 @@ export const Institutions = component$(() => {
       src: "/logos/HSanMartin.jpeg",
       alt: "Hospital San Martín de La Plata",
       name: "Hospital San Martín"
+    },
+    {
+      src: "/logos/urologia-femenina-laplata.webp",
+      alt: "Urología Femenina La Plata",
+      name: "Urología Femenina La Plata"
     }
   ];
 
@@ -24,15 +29,15 @@ export const Institutions = component$(() => {
     <section class="bg-white py-20 border-b border-slate-100">
       <div class="max-w-6xl mx-auto px-4">
         <ScrollReveal direction="up">
-          <div class="flex flex-wrap justify-center items-center gap-16 md:gap-32 transition-opacity duration-500">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 lg:gap-24 items-center justify-items-center transition-opacity duration-500">
             {logos.map((logo, idx) => (
               <div key={idx} class="group relative flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110">
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  class="h-24 md:h-32 w-auto object-contain"
+                  class="h-24 md:h-28 lg:h-32 w-auto object-contain"
                 />
-                <span class="text-xs font-bold text-slate-500 transition-colors group-hover:text-cyan-600 whitespace-nowrap uppercase tracking-wider">
+                <span class="text-xs font-bold text-slate-500 transition-colors group-hover:text-cyan-600 text-center uppercase tracking-wider">
                   {logo.name}
                 </span>
               </div>

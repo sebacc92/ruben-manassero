@@ -44,7 +44,7 @@ export const Footer = component$(() => {
               <a href="#especialidades" class="block text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-base animated-underline w-fit">Áreas de Atención</a>
               <a href="#contacto" class="block text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-base animated-underline w-fit">Atención y Consultas</a>
               <a
-                href="https://cal.com/ruben-manassero"
+                href="http://www.icmsalud.com.ar:8080/Turnos"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-base font-medium"
@@ -75,7 +75,7 @@ export const Footer = component$(() => {
               <div class="flex items-start gap-3">
                 <LuGlobe class="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
                 <a
-                  href="https://cal.com/ruben-manassero"
+                  href="http://www.icmsalud.com.ar:8080/Turnos"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-base text-slate-400 hover:text-cyan-400 transition-colors"

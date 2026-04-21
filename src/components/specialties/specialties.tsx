@@ -9,7 +9,7 @@ export const Specialties = component$(() => {
       description: "Evaluación, diagnóstico y tratamiento de patologías frecuentes:",
       items: [
         "Infecciones urinarias agudas y recurrentes",
-        "Cálculos urinarios (litiasis renal, ureteral y vesical)",
+        "Patología urogenital y control de fertilidad (vasectomías VSB)",
         "Trastornos miccionales (dificultad para orinar, urgencia)",
         "Hematuria (presencia de sangre en orina)",
         "Control prostático preventivo"
@@ -33,9 +33,9 @@ export const Specialties = component$(() => {
     },
     {
       title: "Incontinencia Femenina",
-      description: "Abordaje integral de incontinencia de esfuerzo, mixta y vejiga hiperactiva:",
+      description: "Abordaje integral de la incontinencia de esfuerzo, de urgencia, deficiencias esfinterianas y vejiga hiperactiva:",
       items: [
-        "Tratamiento farmacológico",
+        "Tratamiento médico quirúrgico (técnicas mínimamente invasivas) y farmacológicas (Botox ®)",
         "Reeducación vesical",
         "Indicaciones de rehabilitación del piso pélvico",
         "Evaluación para tratamientos especializados"
@@ -73,7 +73,8 @@ export const Specialties = component$(() => {
     "Dificultad para orinar",
     "Infecciones urinarias repetidas",
     "Sangre en la orina",
-    "Controles prostáticos en hombres mayores de 50 años (o antes según antecedentes)"
+    "Controles prostáticos en hombres mayores de 50 años (o antes según antecedentes)",
+    "Control de Fertilidad (Vasectomia Sin Bisturi)"
   ];
 
   return (

@@ -68,7 +68,7 @@ export const Hero = component$(() => {
         {/* CTA */}
         <div class="hero-cta-anim flex items-center justify-center pt-12">
           <a
-            href="https://cal.com/ruben-manassero"
+            href="http://www.icmsalud.com.ar:8080/Turnos"
             target="_blank"
             rel="noopener noreferrer"
             class="btn-primary inline-flex items-center justify-center gap-3 rounded-2xl px-12 py-5 text-lg font-bold bg-white text-cyan-900 shadow-xl w-full sm:w-auto"

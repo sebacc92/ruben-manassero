@@ -58,8 +58,8 @@ export const Contact = component$(() => {
                   </div>
                   <div>
                     <strong class="block text-slate-900 text-lg">Turnos Online</strong>
-                    <a href="https://cal.com/ruben-manassero" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 animated-underline transition-colors font-medium">
-                      Solicitar turno por Cal.com
+                    <a href="http://www.icmsalud.com.ar:8080/Turnos" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 animated-underline transition-colors font-medium">
+                      Solicitar turno en ICM Salud
                     </a>
                   </div>
                 </div>
@@ -73,6 +73,18 @@ export const Contact = component$(() => {
                     <div class="space-y-1.5 mt-1">
                       <a href="tel:+542214231042" class="text-slate-500 hover:text-cyan-600 transition-colors block font-medium">(221) 423-1042</a>
                       <a href="tel:+542214231099" class="text-slate-500 hover:text-cyan-600 transition-colors block font-medium">(221) 423-1099</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 group">
+                  <div class="icon-box w-11 h-11 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl flex items-center justify-center shrink-0 shadow-sm">
+                    <LuMessageSquare class="w-5 h-5 text-cyan-600" />
+                  </div>
+                  <div>
+                    <strong class="block text-slate-900 text-lg">WhatsApp</strong>
+                    <div class="space-y-1.5 mt-1">
+                      <a href="https://wa.me/5492215706394" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-cyan-600 transition-colors block font-medium">+54 9 221 570-6394</a>
                     </div>
                   </div>
                 </div>

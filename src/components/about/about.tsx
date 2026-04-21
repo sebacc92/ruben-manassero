@@ -21,9 +21,9 @@ export const About = component$(() => {
 
   const continua = [
     "Disfunciones del tracto urinario inferior",
-    "Urodinamia",
+    "Uroflujometría - Urodinamia Computarizada",
     "Urología funcional y femenina",
-    "Manejo clínico de patologías prostáticas",
+    "Manejo clínico quirúrgico de  patologías infravesicales",
   ];
 
   const stats = [
@@ -81,7 +81,7 @@ export const About = component$(() => {
             <div class="lg:col-span-3 space-y-6">
               <div class="text-lg md:text-xl text-slate-600 space-y-5 leading-relaxed">
                 <p>
-                  El Dr. Rubén Manassero es médico especialista en urología con más de dos décadas de experiencia en el diagnóstico y tratamiento de patologías del sistema urinario y del aparato genital masculino, con especial dedicación al área funcional y a la urología femenina.
+                  El Dr. Rubén Manassero es <b>Médico Especialista Consultor en Urología</b> con más de dos décadas de experiencia en el diagnóstico y tratamiento de patologías del sistema urinario y del aparato genital masculino, con especial dedicación al área funcional y a la urología femenina.
                 </p>
                 <p>
                   Desarrolla su actividad en ámbitos hospitalarios, académicos y privados, combinando la asistencia clínica con la formación de profesionales y la participación activa en instituciones científicas de la especialidad.
