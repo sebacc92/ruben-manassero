@@ -21,7 +21,7 @@ export const Footer = component$(() => {
               <img
                 src="/logos/logo-rubben-blanco.png"
                 alt="Logo Dr. Rubén Manassero"
-                class="h-14 w-auto mb-2"
+                class="h-10 md:h-12 xl:h-14 w-auto mb-2"
                 width={220}
                 height={55}
               />
