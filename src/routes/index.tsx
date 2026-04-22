@@ -55,7 +55,7 @@ export const useSendContactEmail = routeAction$(async (datos, { env, fail, reque
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: 'onboarding@resend.dev',
+        from: 'Ruben Manassero <noreply@manasseroruben.com.ar>',
         to: 'sebastiancardoso92@gmail.com',
         subject: `Nuevo contacto de: ${datos.nombre}`,
         html: `
