@@ -20,8 +20,8 @@ export const Institutions = component$(() => {
     },
     {
       src: "/logos/urologia-femenina-laplata.webp",
-      alt: "Urología Femenina La Plata",
-      name: "Urología Femenina La Plata"
+      alt: "Urología Femenina La Plata con dirección 43 n 585 entre 6 y 7",
+      name: "Urología Femenina La Plata con dirección 43 n 585 entre 6 y 7"
     }
   ];
 
