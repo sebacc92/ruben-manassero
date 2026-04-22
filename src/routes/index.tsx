@@ -56,7 +56,7 @@ export const useSendContactEmail = routeAction$(async (datos, { env, fail, reque
       },
       body: JSON.stringify({
         from: 'Ruben Manassero <noreply@manasseroruben.com.ar>',
-        to: 'sebastiancardoso92@gmail.com',
+        to: 'rubenmanass@gmail.com',
         subject: `Nuevo contacto de: ${datos.nombre}`,
         html: `
           <h1>Nuevo mensaje desde la web de Dr. Rubén Manassero</h1>
