@@ -6,22 +6,26 @@ export const Institutions = component$(() => {
     {
       src: "/logos/IC-LaPlata.png",
       alt: "Instituto Central de Medicina - La Plata",
-      name: "Instituto Central de Medicina"
+      name: "Instituto Central de Medicina",
+      url: "http://icmsalud.com.ar/"
     },
     {
       src: "/logos/IMP-Logo.png",
       alt: "Instituto Médico Platense",
-      name: "Instituto Médico Platense"
+      name: "Instituto Médico Platense",
+      url: "https://www.institutomedicoplatense.com/"
     },
     {
       src: "/logos/HSanMartin.jpeg",
       alt: "Hospital San Martín de La Plata",
-      name: "Hospital San Martín"
+      name: "Hospital San Martín",
+      url: "https://hospitalsanmartin.ar/"
     },
     {
       src: "/logos/urologia-femenina-laplata.webp",
       alt: "Urología Femenina La Plata con dirección 43 n 585 entre 6 y 7",
-      name: "Urología Femenina La Plata con dirección 43 n 585 entre 6 y 7"
+      name: "Urología Femenina La Plata con dirección 43 n 585 entre 6 y 7",
+      url: "https://www.instagram.com/urofemlp"
     }
   ];
 
@@ -31,7 +35,13 @@ export const Institutions = component$(() => {
         <ScrollReveal direction="up">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 lg:gap-24 items-center justify-items-center transition-opacity duration-500">
             {logos.map((logo, idx) => (
-              <div key={idx} class="group relative flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110">
+              <a
+                key={idx}
+                href={logo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative flex flex-col items-center gap-4 transition-transform duration-300 hover:scale-110"
+              >
                 <img
                   src={logo.src}
                   alt={logo.alt}
@@ -40,7 +50,7 @@ export const Institutions = component$(() => {
                 <span class="text-sm font-bold text-slate-500 transition-colors group-hover:text-cyan-600 text-center uppercase tracking-wider">
                   {logo.name}
                 </span>
-              </div>
+              </a>
             ))}
           </div>
         </ScrollReveal>
