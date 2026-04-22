@@ -1,13 +1,53 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { Form } from "@builder.io/qwik-city";
 import { LuMapPin, LuPhone, LuCalendar, LuAlertTriangle, LuInfo, LuGlobe, LuClock, LuShield, LuSend, LuUser, LuMail, LuMessageSquare } from "@qwikest/icons/lucide";
 import { ScrollReveal } from "../scroll-reveal/scroll-reveal";
+import { useSendContactEmail } from "~/routes/index";
+
+declare global {
+  interface Window {
+    turnstile: any;
+  }
+}
 
 export const Contact = component$(() => {
-  const formName = useSignal("");
-  const formEmail = useSignal("");
-  const formPhone = useSignal("");
-  const formMessage = useSignal("");
-  const formSent = useSignal(false);
+  const action = useSendContactEmail();
+  const containerRef = useSignal<HTMLElement>();
+  const turnstileToken = useSignal("");
+
+  // eslint-disable-next-line qwik/no-use-visible-task
+  useVisibleTask$(({ track }) => {
+    track(() => containerRef.value);
+
+    if (typeof window === "undefined" || !containerRef.value) return;
+
+    const renderWidget = () => {
+      if (window.turnstile) {
+        window.turnstile.render(containerRef.value, {
+          sitekey: import.meta.env.PUBLIC_TURNSTILE_SITE_KEY,
+          theme: "light",
+          callback: function (token: string) {
+            turnstileToken.value = token;
+          },
+          "expired-callback": function () {
+            turnstileToken.value = "";
+          },
+        });
+      }
+    };
+
+    if (!document.getElementById("turnstile-script")) {
+      const script = document.createElement("script");
+      script.id = "turnstile-script";
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      script.onload = renderWidget;
+      document.head.appendChild(script);
+    } else {
+      renderWidget();
+    }
+  });
 
   return (
     <section id="contacto" class="py-28 bg-slate-50 px-4 relative overflow-hidden">
@@ -197,7 +237,7 @@ export const Contact = component$(() => {
 
               {/* Right: Form */}
               <div class="lg:col-span-3">
-                {formSent.value ? (
+                {action.value?.success ? (
                   <div class="flex flex-col items-center justify-center h-full text-center py-8 space-y-4">
                     <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center">
                       <svg class="w-8 h-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -206,28 +246,9 @@ export const Contact = component$(() => {
                     </div>
                     <h4 class="text-xl font-bold text-slate-900">¡Mensaje enviado!</h4>
                     <p class="text-slate-500">Nos pondremos en contacto pronto.</p>
-                    <button
-                      type="button"
-                      onClick$={() => {
-                        formSent.value = false;
-                        formName.value = "";
-                        formEmail.value = "";
-                        formPhone.value = "";
-                        formMessage.value = "";
-                      }}
-                      class="text-cyan-600 hover:text-cyan-700 font-medium text-sm mt-2"
-                    >
-                      Enviar otra consulta
-                    </button>
                   </div>
                 ) : (
-                  <form
-                    preventdefault:submit
-                    onSubmit$={() => {
-                      formSent.value = true;
-                    }}
-                    class="space-y-5"
-                  >
+                  <Form action={action} class="space-y-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
                         <label for="contact-name" class="block text-sm font-semibold text-slate-700 mb-2">
@@ -237,14 +258,14 @@ export const Contact = component$(() => {
                           <LuUser class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                           <input
                             id="contact-name"
+                            name="nombre"
                             type="text"
                             required
-                            value={formName.value}
-                            onInput$={(_, el) => (formName.value = el.value)}
                             placeholder="Tu nombre"
                             class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-100 transition-all duration-300 text-sm"
                           />
                         </div>
+                        {action.value?.fieldErrors?.nombre && <p class="text-red-500 text-xs mt-1">{action.value.fieldErrors.nombre}</p>}
                       </div>
                       <div>
                         <label for="contact-email" class="block text-sm font-semibold text-slate-700 mb-2">
@@ -254,14 +275,14 @@ export const Contact = component$(() => {
                           <LuMail class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                           <input
                             id="contact-email"
+                            name="email"
                             type="email"
                             required
-                            value={formEmail.value}
-                            onInput$={(_, el) => (formEmail.value = el.value)}
                             placeholder="tu@email.com"
                             class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-100 transition-all duration-300 text-sm"
                           />
                         </div>
+                        {action.value?.fieldErrors?.email && <p class="text-red-500 text-xs mt-1">{action.value.fieldErrors.email}</p>}
                       </div>
                     </div>
                     <div>
@@ -272,13 +293,13 @@ export const Contact = component$(() => {
                         <LuPhone class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                         <input
                           id="contact-phone"
+                          name="telefono"
                           type="tel"
-                          value={formPhone.value}
-                          onInput$={(_, el) => (formPhone.value = el.value)}
                           placeholder="(221) 000-0000"
                           class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-100 transition-all duration-300 text-sm"
                         />
                       </div>
+                      {action.value?.fieldErrors?.telefono && <p class="text-red-500 text-xs mt-1">{action.value.fieldErrors.telefono}</p>}
                     </div>
                     <div>
                       <label for="contact-message" class="block text-sm font-semibold text-slate-700 mb-2">
@@ -288,23 +309,40 @@ export const Contact = component$(() => {
                         <LuMessageSquare class="absolute left-4 top-4 w-4 h-4 text-slate-400" />
                         <textarea
                           id="contact-message"
+                          name="mensaje"
                           required
                           rows={4}
-                          value={formMessage.value}
-                          onInput$={(_, el) => (formMessage.value = el.value)}
                           placeholder="Describí brevemente tu consulta..."
                           class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-100 transition-all duration-300 text-sm resize-none"
                         />
                       </div>
+                      {action.value?.fieldErrors?.mensaje && <p class="text-red-500 text-xs mt-1">{action.value.fieldErrors.mensaje}</p>}
                     </div>
+
+                    {/* Global Error Message */}
+                    {action.value?.failed && <p class="text-red-600 text-sm font-bold bg-red-50 p-3 rounded-xl border border-red-100">{action.value.message}</p>}
+
+                    {/* Turnstile Widget */}
+                    <div class="min-h-[65px]">
+                      <div ref={containerRef}></div>
+                    </div>
+                    <input type="hidden" name="cf-turnstile-response" value={turnstileToken.value} />
+
                     <button
                       type="submit"
-                      class="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl px-8 py-3.5 font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all duration-300"
+                      disabled={action.isRunning || !turnstileToken.value}
+                      class="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-xl px-8 py-3.5 font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <LuSend class="w-4 h-4" />
-                      Enviar consulta
+                      {action.isRunning ? (
+                        <>Enviando...</>
+                      ) : (
+                        <>
+                          <LuSend class="w-4 h-4" />
+                          Enviar consulta
+                        </>
+                      )}
                     </button>
-                  </form>
+                  </Form>
                 )}
               </div>
             </div>
